@@ -8,6 +8,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Session\SessionInterface;
+use Illuminate\Session\Store;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Contracts\Routing\UrlGenerator;
 
@@ -1178,7 +1179,7 @@ class FormBuilder
      *
      * @return $this
      */
-    public function setSessionStore(SessionInterface $session)
+    public function setSessionStore(Store $session)
     {
         $this->session = $session;
 
